@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.contenedor
+{
+    scroll-padding-top: 60px 0px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo
+{
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header con un filtro para la imagen de fondo con un color semitransparente */
+header
+{
+    width: 100%;
+    height: 600px;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(0, 0%, 100%, 0.795), hsla(196, 93%, 70%, 0.726), hsla(204, 64%, 44%, 0.644)), url(/images/3DPrintObjects.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    background: linear-gradient(to right, hsla(0, 0%, 100%, 0.795), hsla(196, 93%, 70%, 0.726), hsla(204, 64%, 44%, 0.644)), url(/images/3DPrintObjects.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.links
+{
+    text-align: right;
+    padding: 10px 50px 0 0;
+/* Propiedades botones de Inicio, acerca de, portafolio etc. */
+}
+nav > a{
+color: white;
+font-weight: 300;
+text-decoration: none;
+margin-right: 10px;
+}
+nav > a:hover{
+    text-decoration: underline;
+}
+/* ///////////////////////////////////////////////////////// */
+
+/* Texto central del header */
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+/* ///////////////////////// */
+
+/* Texto de potencia tus ventas que está en el header principal */
+.textos-header h1{
+    font-size: 50px;
+    color: black;
+}
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+}
+/* //////////////////////////////////////////////////////////// */
+
+/* Posición de la ola pegada a la parte de abajo */
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* ///////////////////////////////////////////// */
+
+/* /////////////////////////////////about us///////////////////////////////// */
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* Position of the image and text of our products */
+.imagen-about-us{
+    width: 48%;
+}
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+/* ////////////////////////////////////////////// */
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+/* Numeros englobados 1 y 2 */
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 black ;
+    margin-right: 5px;
+}
+/* Contenido textos de parrafos de nuestro producto 1 y 2*/
+.contenido-textos p{
+    padding: 0px 0px 30px 15px ;
+    font-weight: 300;
+    text-align: justify;
+}
+/* //////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////Galería////////////////////////////////////////////// */
+/* Cambio de color en el body para diferenciarse del resto */
+.portafolio{
+    background: rgb(224, 224, 224);
+}
+/* /////////////////////////////////////////////////////// */
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen-port{
+    width: 24%;
+    height: 200px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px black ;
+}
+.imagen-port img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+/* ////////////////////// Animación del portafolio ///////////////////// */
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0); 
+    background-color: hsla(273, 34%, 80%, 0.0);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hover-galeria img{
+    width: 100px;
+    height: 100px;
+}
+.hover-galeria p{
+    color: white;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+/* ////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////Clientes/////////////////////////////////////// */
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* Fondo de color para resaltar */
+.cards .card{
+    background: rebeccapurple;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px black;
+}
+/* //////////////////////////// */
+/* Propiedad de las 2 imágenes */
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px white;
+    border-radius: 50%;
+    display: block;
+}
+/* /////////////////////////// */
+/* Contenido de texto */
+.cards .card > .contenido-texto-cards{
+    width: 60%;
+    color: white;
+    text-align: justify;
+}
+/* ///////////////// */
+.cards .card > .contenido-texto-cards p{
+    font-weight: 300px;
+    padding-top: 5px;
+}
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* /////////////////////// Nuestros servicios /////////////////////////  */
+.about-services{
+    background: rgb(197, 197, 197);
+    padding-bottom: 30px;
+}
+.servicio-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+.servicio-ind img{
+    width: 90%;
+}
+/* Nombre y texto descriptivo de servicios */
+.servicio-in h3{
+    margin: 10px 0px;
+}
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+/* /////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////// footer //////////////////////////// */
+footer{
+    background: rgb(180, 180, 180);
+    padding: 60px 0px 30px 0px;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor-footer{
+    display: flex;
+    width: 95%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 2px solid gray;
+}
+/* ///////////////////////////////////////////////////////////// */
