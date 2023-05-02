@@ -126,6 +126,30 @@ header .textos-header{
 /* //////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////// */
 
+/* ////////////////////// Galería de imágenes móviles /////////////////////// */
+.galeriamovil{
+    border-top-color: orange;
+    margin: 20px;
+    display:flex;
+    width: auto;
+    height: 230px;
+}
+.galeriamovil img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.galeriamovil img:hover{
+    cursor:move;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(100%);
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
 /* //////////////////////////////////////////Galería////////////////////////////////////////////// */
 /* Cambio de color en el body para diferenciarse del resto */
 .portafolio{
@@ -196,16 +220,16 @@ display: block;
     box-shadow: 0 0 6px black;
 }
 /* //////////////////////////// */
-/* Propiedad de las 2 imágenes */
+/* Propiedad de las 2 imágenes de clientes */
 .cards .card img{
     width: 100px;
     height: 100px;
     object-fit: cover;
     border: 3px white;
-    border-radius: 50%;
+    border-radius: 20%;
     display: block;
 }
-/* /////////////////////////// */
+/* ////////////////////////////////////// */
 /* Contenido de texto */
 .cards .card > .contenido-texto-cards{
     width: 60%;
@@ -223,6 +247,10 @@ display: block;
 .about-services{
     background: rgb(197, 197, 197);
     padding-bottom: 30px;
+}
+.titulo{
+    display:block;
+    text-align:center;
 }
 .servicio-cont{
     display: flex;
@@ -250,16 +278,19 @@ display: block;
 /* ///////////////////////// footer //////////////////////////// */
 footer{
     background: rgb(180, 180, 180);
-    padding: 60px 0px 30px 0px;
-    margin: auto;
-    overflow: scroll;
+    padding: 20px;
+}
+.contenedor-contacto{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 .contenedor-footer{
-    display: flex;
-    width: 95%;
-    justify-content: space-evenly;
-    margin: auto;
-    padding-bottom: 50px;
-    border-bottom: 2px solid gray;
+    width: 28%;
+    text-align:justify;
+} 
+.titulo-final{
+    width: 100%;
+    text-align:start;
 }
 /* ///////////////////////////////////////////////////////////// */
